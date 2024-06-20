@@ -1,26 +1,12 @@
-import React from 'react'
+import { useSelector } from 'react-redux'
+
 import Contato from '../../components/Contato'
 import { Container } from './styles'
 
-const contatos = [
-  {
-    nome: 'Ana Souza',
-    email: 'ana.souza@example.com',
-    telefone: '(21) 98888-8888'
-  },
-  {
-    nome: 'Matheus Silva',
-    email: 'matheus.silva@example.com',
-    telefone: '(31) 97777-7777'
-  },
-  {
-    nome: 'Isabela Santos',
-    email: 'isabela.santos@example.com',
-    telefone: '(11) 94444-4444'
-  }
-]
+import { RootReducer } from '../../store'
 
 const ListaDeContatos = () => {
+  const { contatos } = useSelector((state: RootReducer) => state)
   return (
     <Container>
       <h1>Contatos</h1>

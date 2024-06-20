@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import variaveis from '../../styles/variaveis'
 
 export const Card = styled.div`
   background-color: #fcfcfc;
@@ -9,7 +10,7 @@ export const Card = styled.div`
   border-radius: 16px;
 `
 
-export const Infos = styled.textarea`
+const Infos = styled.textarea`
   color: #8b8b8b;
   font-size: 14px;
   line-height: 18px;
@@ -39,6 +40,15 @@ export const Botao = styled.button`
   border-radius: 8px;
   margin-right: 8px;
 `
+
+export const BotaoSalvar = styled(Botao)`
+  background-color: ${variaveis.verde};
+`
+
+export const BotaoCancelar = styled(Botao)`
+  background-color: ${variaveis.vermelho};
+`
+
 export const Nome = Infos
 export const Email = Infos
 export const Telefone = Infos
