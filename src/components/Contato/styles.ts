@@ -22,10 +22,24 @@ const Infos = styled.textarea`
   resize: none;
   border: none;
   background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+`
+
+const InputInfos = styled.input`
+  color: #8b8b8b;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Roboto Mono, monospace';
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 `
 
 export const BarraAcoes = styled.div`
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 16px;
 `
 
@@ -41,14 +55,10 @@ export const Botao = styled.button`
   margin-right: 8px;
 `
 
-export const BotaoSalvar = styled(Botao)`
-  background-color: ${variaveis.verde};
-`
-
 export const BotaoCancelar = styled(Botao)`
   background-color: ${variaveis.vermelho};
 `
 
 export const Nome = Infos
 export const Email = Infos
-export const Telefone = Infos
+export const Telefone = InputInfos
